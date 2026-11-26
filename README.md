@@ -14,6 +14,15 @@ This template is the Rust-engine counterpart of [fayozegoist/9router-railway](ht
 6. Add provider accounts under **Providers**, create a gateway key under **Endpoint & Key**.
 7. Point your client at `https://<your-domain>/v1` with that key.
 
+## Scripts
+
+```bash
+./scripts/deploy-railway.sh   # create project, set vars, add volume, deploy, print password
+./scripts/run-local.sh        # docker build + run on http://localhost:20128
+```
+
+`deploy-railway.sh` needs the Railway CLI (`npm i -g @railway/cli`) and `railway login`. It generates `INITIAL_PASSWORD` and `JWT_SECRET` if you don't export them.
+
 ## Features
 
 - **Unified endpoint** — one base URL and one key for every provider and CLI tool.
